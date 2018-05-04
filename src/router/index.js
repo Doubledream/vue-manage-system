@@ -30,6 +30,10 @@ export default new Router({
                     component: resolve => require(['../components/page/BaseForm.vue'], resolve)
                 },
                 {
+                    path: '/patientform',
+                    component: resolve => require(['../components/page/PatientForm.vue'], resolve)
+                },
+                {
                     path: '/vueeditor',
                     component: resolve => require(['../components/page/VueEditor.vue'], resolve)    // Vue-Quill-Editor组件
                 },
@@ -54,6 +58,10 @@ export default new Router({
         {
             path: '/login',
             component: resolve => require(['../components/page/Login.vue'], resolve)
+        },
+        {
+            path: '/signup',
+            component: resolve => require(['../components/page/Signup.vue'], resolve)
         },
     ]
 })

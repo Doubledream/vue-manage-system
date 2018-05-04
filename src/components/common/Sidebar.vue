@@ -25,33 +25,37 @@
             return {
                 items: [
                     {
-                        icon: 'el-icon-setting',
+                        icon: 'el-icon-star-on',
                         index: 'readme',
-                        title: '自述'
+                        title: '简介'
                     },
                     {
                         icon: 'el-icon-menu',
                         index: '2',
-                        title: '表格',
+                        title: '查询',
                         subs: [
                             {
                                 index: 'basetable',
-                                title: '基础表格'
+                                title: '基础查询'
                             },
                             {
                                 index: 'vuetable',
-                                title: 'Vue表格组件'
+                                title: '图像查询'
                             }
                         ]
                     },
                     {
-                        icon: 'el-icon-date',
+                        icon: 'el-icon-upload2',
                         index: '3',
-                        title: '表单',
+                        title: '病例上传',
                         subs: [
+                            // {
+                            //     index: 'baseform',
+                            //     title: '病例填写'
+                            // },
                             {
-                                index: 'baseform',
-                                title: '基本表单'
+                                index: 'patientform',
+                                title: '病例填写'
                             },
                             {
                                 index: 'vueeditor',
@@ -68,15 +72,20 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-star-on',
-                        index: 'basecharts',
-                        title: '图表'
+                        icon: 'el-icon-date',
+                        index: 'drag',
+                        title: '图像管理'
                     },
                     {
-                        icon: 'el-icon-upload2',
-                        index: 'drag',
-                        title: '拖拽'
+                        icon: 'el-icon-setting',
+                        index: 'basecharts',
+                        title: '后台管理'
                     }
+                    // {
+                    //     icon: 'el-icon-date',
+                    //     index: 'drag',
+                    //     title: '拖拽'
+                    // }
                 ]
             }
         },
@@ -95,10 +104,10 @@
         width: 250px;
         left: 0;
         top: 70px;
-        bottom:0;
+        bottom: 0;
         background: #2E363F;
     }
     .sidebar > ul {
-        height:100%;
+        height: 100%;
     }
 </style>

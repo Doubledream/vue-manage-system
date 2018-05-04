@@ -29,7 +29,9 @@ module.exports = {
       'vue$': 'vue/dist/vue.common.js',
       'src': resolve('src'),
       'assets': resolve('src/assets'),
-      'components': resolve('src/components')
+      'components': resolve('src/components'),
+      'modernizr$': resolve('.modernizrrc')
+
     }
   },
   module: {
@@ -58,9 +60,24 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.modernizrrc.js$/,
+        use: [ 'modernizr-loader' ]
+      },
+      {
+        test: /\.modernizrrc(\.json)?$/,
+        use: [ 'modernizr-loader', 'json-loader' ]
       }
     ]
   },
+  plugins: [
+   new webpack.optimize.CommonsChunkPlugin('common.js'),
+   new webpack.ProvidePlugin({
+       jQuery: "jquery",
+       $: "jquery"
+   })
+  ]
     // plugins: [
     //     new webpack.DllReferencePlugin({
     //       context: path.resolve(__dirname, '..'),
